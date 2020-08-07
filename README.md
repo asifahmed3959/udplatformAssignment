@@ -1,7 +1,7 @@
-# UDPlatForm Assignment
+# udplatforms assignment
 
-This repository presents the assignment I have received from UDPlatform. 
-This is a Django Rest Framework App where I have created RESTFul API. The configuration of the application can be found in the project/settings.py module. I have created two models using ORM with sqlite3 for the application. The models can be found in base/models.py module. There are two models, one is Parent model and the other is Child model. The Parent model is related to the Child model with a one to many relationship.  
+This repository presents the assignment I have received from udplatforms. 
+This is a Django Rest Framework App where I have created RESTFul API. The test cases which I have written can be found in api/users/tests.py module. For the views I have used ModelViewSet of Django Rest Framework viewsets, which creates all the apis required for CRUD and getting the list for a model, thus maintaining DRY principle. The configuration of the application can be found in the project/settings.py module. I have created two models using ORM with sqlite3 for the application. The models can be found in base/models.py module. There are two models, one is Parent model and the other is Child model. The Parent model is related to the Child model with a one to many relationship.  
 
 The Parent model has the following fields with validation:
 - id primary key uuid field
@@ -46,7 +46,7 @@ $ python manage.py runserver
 
 ### APIs:
 
-#### API Request
+#### API Request examples
 
 **URL** : "/api/parents/"
 **Method** : GET
@@ -327,3 +327,23 @@ $ python manage.py runserver
 
 **Responses** : 
 **204** 
+
+# Test Cases
+
+1) test_get_parent_list
+2) test_create_parent
+3) test_create_parent_validation_error_keeping_field_city_empty
+4)  test_create_parent_validation_error_sending_empty_field
+5) test_create_parent_validation_error_sending_more_than_256_characters
+6) test_update_parent
+7) test_partial_update_parent
+8) test_delete_parent
+9) test_get_children_list
+10) test_get_children_list_does_not_exist
+11) test_create_child
+12) test_create_child_validation_error
+13) test_create_child_cant_find_parent
+14) test_delete_child
+15) test_update_child
+16) test_partial_update_child
+
