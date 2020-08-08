@@ -1,7 +1,7 @@
 # udplatforms assignment
 
 This repository presents the assignment I have received from udplatforms. 
-This is a Django Rest Framework App where I have created RESTFul API. The test cases which I have written can be found in api/users/tests.py module. For the views I have used ModelViewSet of Django Rest Framework viewsets, which creates all the apis required for CRUD and getting the list for a model, thus maintaining DRY principle. The configuration of the application can be found in the project/settings.py module. I have created two models using ORM with sqlite3 for the application. The models can be found in base/models.py module. There are two models, one is Parent model and the other is Child model. The Parent model is related to the Child model with a one to many relationship.  
+This is a Django Rest Framework App where I have created RESTFul API. For creating the APIs I have followed the apigee web api design methodology, which basically suggests to make resource based api. The test cases which I have written can be found in api/users/tests.py module. It has been unit tested. For the views I have used ModelViewSet of Django Rest Framework viewsets, which creates all the apis required for CRUD and getting the list for the model, thus maintaining DRY principle. The configuration of the application can be found in the project/settings.py module. I have created two models using ORM with sqlite3 for the application. The models can be found in base/models.py module. There are two models, one is Parent model and the other is Child model. The Parent model is related to the Child model with a one to many relationship. With due time I could not manage to add docstrings which would have made all the functions, classes and module easier to understand. 
 
 The Parent model has the following fields with validation:
 - id primary key uuid field
@@ -34,6 +34,11 @@ $ pytest --nomigrations --create-db
 ```
 $ python manage.py runserver
 ```
+5. To see the score and corrections of linting which was done with pylint-django, which scored 7.47/10, the following command can be used:
+```
+$ pylint --load-plugins pylint_django project base api manage.py
+```
+
 
 # Technoligies used
 
@@ -43,6 +48,7 @@ $ python manage.py runserver
   - Django REST Framework 3.11.1
   - Factory - boy 2.12.0
   - sqlite3
+  - Pylint Django 2.3.0
 
 ### APIs:
 
@@ -328,22 +334,35 @@ $ python manage.py runserver
 **Responses** : 
 **204** 
 
-# Test Cases
+# Brief Test Cases Explanation
 
-1) test_get_parent_list
-2) test_create_parent
-3) test_create_parent_validation_error_keeping_field_city_empty
-4)  test_create_parent_validation_error_sending_empty_field
-5) test_create_parent_validation_error_sending_more_than_256_characters
-6) test_update_parent
-7) test_partial_update_parent
-8) test_delete_parent
-9) test_get_children_list
-10) test_get_children_list_does_not_exist
-11) test_create_child
-12) test_create_child_validation_error
+1) test_get_parent_list: 
+This checks whether we get the correct response and data from the url "/api/parents/"
+2) test_create_parent: 
+This checks whether we can correctly create a parent model in the url "/api/parents/" with correct responses
+3) test_create_parent_validation_error_keeping_field_city_empty:
+This checks if validation error is raised if one of the field is missing
+4)  test_create_parent_validation_error_sending_empty_field:
+This checks if validation error is raised if one of the field is kept empty
+5) test_create_parent_validation_error_sending_more_than_256_characters:
+This checks if validation error is raised if one of the field exceeds more than 256 characters
+6) test_update_parent:
+This checks if the parent model can updated with correct response in the url "/api/parents/<parent_id>/"
+7) test_partial_update_parent:
+This checks if the parent model can partially updated with correct response in the url "/api/parents/<parent_id>/"
+8) test_delete_parent:
+This checks if the parent model can deleted with correct response in the url "/api/parents/<parent_id>/"
+9) test_get_children_list:
+This checks whether we get the correct response and data from the url "/api/parents/<parent_id>/children/"
+10) test_get_children_list_does_not_exist:
+This checks whether we get http 404 response when the parent_id is does not exist in the url "/api/parents/<parent_id>/children/"
+11) test_create_child:
+This checks whether we can correctly create a child model in the url "/api/parents/<parent_id>/children/" with correct responses
+12) test_create_child_validation_error:
 13) test_create_child_cant_find_parent
-14) test_delete_child
-15) test_update_child
-16) test_partial_update_child
-
+14) test_delete_child:
+This checks if the child model can deleted with correct response in the url "/api/parents/<parent_id>/children/<child_id>/"
+15) test_update_child:
+This checks if the child model can updated with correct response in the url "/api/parents/<parent_id>/children/<child_id>/"
+16) test_partial_update_child:
+This checks if the child model can partially updated with correct response in the url "/api/parents/<parent_id>/children/<child_id>/"
