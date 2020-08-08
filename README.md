@@ -54,6 +54,9 @@ $ pylint --load-plugins pylint_django project base api manage.py
 
 #### API Request examples
 
+##### To see the list of the parents with their children this is the api used:
+
+
 **URL** : "/api/parents/"
 **Method** : GET
 **Responses** : 
@@ -127,6 +130,8 @@ $ pylint --load-plugins pylint_django project base api manage.py
 ]
 ```
 
+##### To create a parent this is the api used:
+
 **URL** : "/api/parents/"
 **Method** : POST
 **Request Data** : 
@@ -157,6 +162,8 @@ $ pylint --load-plugins pylint_django project base api manage.py
     "children": []
 }
 ```
+
+##### For updating a parent this is the api used:
 
 **URL** : "/api/parents/<parent_id>/"
 **Method** : PUT
@@ -189,6 +196,8 @@ $ pylint --load-plugins pylint_django project base api manage.py
 }
 ```
 
+##### For partial updating a parent this is the api used:
+
 **URL** : "/api/parents/<parent_id>/"
 **Method** : PATCH
 **Request Data** : 
@@ -215,12 +224,15 @@ $ pylint --load-plugins pylint_django project base api manage.py
 }
 ```
 
+##### For Deleting a parent this is the api used:
+
 **URL** : "/api/parents/<parent_id>/"
 **Method** : DELETE
 
 **Responses** : 
 **204** 
 
+##### For getting the list of the children a parent has this is the api used:
 
 **URL** : "/api/parents/<parent_id>/children/"
 **Method** : GET
@@ -263,6 +275,8 @@ $ pylint --load-plugins pylint_django project base api manage.py
 ]
 ```
 
+##### For creating a child has this is the api used:
+
 **URL** : "/api/parents/<parent_id>/children/"
 **Method** : POST
 **Request Data** : 
@@ -284,6 +298,8 @@ $ pylint --load-plugins pylint_django project base api manage.py
     "last_name": "Becky"
 }
 ```
+
+##### For updating a child has this is the api used:
 
 **URL** : "/api/parents/<parent_id>/children/<child_id>/"
 **Method** : PUT
@@ -307,6 +323,8 @@ $ pylint --load-plugins pylint_django project base api manage.py
 }
 ```
 
+##### For partial updating a child has this is the api used:
+
 **URL** : "/api/parents/<parent_id>/children/<child_id>/"
 **Method** : PATCH
 **Request Data** : 
@@ -327,6 +345,8 @@ $ pylint --load-plugins pylint_django project base api manage.py
     "last_name": "Claude"
 }
 ```
+
+##### For Deleting a child has this is the api used:
 
 **URL** : "/api/parents/<parent_id>/children/<child_id>/"
 **Method** : DELETE
