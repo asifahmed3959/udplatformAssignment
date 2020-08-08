@@ -381,8 +381,8 @@ This checks whether we can correctly create a child model in the url "/api/paren
 12) test_create_child_validation_error:
 13) test_create_child_cant_find_parent
 14) test_delete_child:
-This checks if the child model can deleted with correct response in the url "/api/parents/<parent_id>/children/<child_id>/"
+This checks if the child model can delete with correct response in the url "/api/parents/<parent_id>/children/<child_id>/"
 15) test_update_child:
-This checks if the child model can updated with correct response in the url "/api/parents/<parent_id>/children/<child_id>/"
+This checks if the child model can update with correct response in the url "/api/parents/<parent_id>/children/<child_id>/"
 16) test_partial_update_child:
-This checks if the child model can partially updated with correct response in the url "/api/parents/<parent_id>/children/<child_id>/"
+This checks if the child model can partially update with correct response in the url "/api/parents/<parent_id>/children/<child_id>/"
