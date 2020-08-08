@@ -1,7 +1,7 @@
+import factory
+
 from base.models import Parent
 from base.models import Child
-
-import factory
 
 
 class ParentFactory(factory.DjangoModelFactory):

@@ -3,11 +3,11 @@ from django.shortcuts import Http404
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import AllowAny
 
-from .serializers import UserListSerializer
-from .serializers import ChildSerializer
-
 from base.models import Parent
 from base.models import Child
+
+from .serializers import UserListSerializer
+from .serializers import ChildSerializer
 
 
 class UserModelViewSet(ModelViewSet):
