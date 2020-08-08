@@ -367,11 +367,11 @@ This checks if validation error is raised if one of the field is kept empty
 5) test_create_parent_validation_error_sending_more_than_256_characters:
 This checks if validation error is raised if one of the field exceeds more than 256 characters
 6) test_update_parent:
-This checks if the parent model can updated with correct response in the url "/api/parents/<parent_id>/"
+This checks if the parent model can update with correct response in the url "/api/parents/<parent_id>/"
 7) test_partial_update_parent:
-This checks if the parent model can partially updated with correct response in the url "/api/parents/<parent_id>/"
+This checks if the parent model can partially update with correct response in the url "/api/parents/<parent_id>/"
 8) test_delete_parent:
-This checks if the parent model can deleted with correct response in the url "/api/parents/<parent_id>/"
+This checks if the parent model can delete with correct response in the url "/api/parents/<parent_id>/"
 9) test_get_children_list:
 This checks whether we get the correct response and data from the url "/api/parents/<parent_id>/children/"
 10) test_get_children_list_does_not_exist:
