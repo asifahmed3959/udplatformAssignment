@@ -19,7 +19,7 @@ The Child model has the following fields with validation:
 - parent_id, foreign key beloning to Parent
 
 Here are the steps to run the test cases and the application:
-1)  A python virtual environment is needed. 
+1)  A python3 virtual environment is needed. 
 2. To ensure the correct packages are used to run the test cases, the packages can be installed using the command:
 
 ```
