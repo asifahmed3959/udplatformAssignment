@@ -4,6 +4,8 @@ from rest_framework.routers import DefaultRouter
 
 from . import views
 
+#router helps connect views, when a server is turned on, it is listening on a port, and when a request is made,
+#the request looks into the list of urls that are available, once connected, it connect with the views
 
 router = DefaultRouter()
 router.register(r'parents', views.UserModelViewSet, basename='parent')

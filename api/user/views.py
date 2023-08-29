@@ -10,6 +10,7 @@ from .serializers import UserListSerializer
 from .serializers import ChildSerializer
 
 
+#CRUD Operation for the Parent Model
 class UserModelViewSet(ModelViewSet):
     permission_classes = [AllowAny, ]
     queryset = Parent.objects.all()
@@ -25,6 +26,7 @@ class UserModelViewSet(ModelViewSet):
         return obj
 
 
+#CRUD Operation for the Children Model
 class ChildrenModelViewSet(ModelViewSet):
     permission_classes = [AllowAny, ]
     serializer_class = ChildSerializer

@@ -1,6 +1,6 @@
-# udplatforms assignment
+# Simple Nested REST API with DJANGO REST FRAMEWORK
+ 
 
-This repository presents the assignment I have received from udplatforms. 
 This is a Django Rest Framework App where I have created RESTFul API. For creating the APIs I have followed the apigee web api design methodology, which basically suggests to make resource based api. The test cases which I have written can be found in api/users/tests.py module. It has been unit tested. For the views I have used ModelViewSet of Django Rest Framework viewsets, which creates all the apis required for CRUD and getting the list for the model, thus maintaining DRY principle. The configuration of the application can be found in the project/settings.py module. I have created two models using ORM with sqlite3 for the application. The models can be found in base/models.py module. There are two models, one is Parent model and the other is Child model. The Parent model is related to the Child model with a one to many relationship. With due time I could not manage to add docstrings which would have made all the functions, classes and module easier to understand. 
 
 The Parent model has the following fields with validation:

@@ -3,6 +3,7 @@ import factory
 from base.models import Parent
 from base.models import Child
 
+#The factories help build model objects which help with testing.
 
 class ParentFactory(factory.DjangoModelFactory):
     class Meta:

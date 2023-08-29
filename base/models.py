@@ -2,7 +2,7 @@ import uuid
 
 from django.db import models
 
-
+#The models work with ORM technology and helps build Databases and queries to work with.
 class Parent(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True)
     first_name = models.CharField(max_length=256)

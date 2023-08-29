@@ -4,6 +4,8 @@ from base.models import Parent
 from base.models import Child
 
 
+#Serializers help serialize and deserialize the data back and forth to JSON Object.
+
 class ChildSerializer(serializers.ModelSerializer):
 
     class Meta:
